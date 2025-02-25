@@ -1,8 +1,21 @@
-# React + Vite
+# Random User App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React application that fetches and displays random user data from the [Random User API](https://randomuser.me/).
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Display user information with profile images
+- Load new users dynamically
+- Search functionality
+- Dark mode toggle
+- Responsive design
+
+## Installation
+
+1. Clone the repository
+2. Install dependencies: `npm install`
+3. Start the app: `npm start`
+
+## Live Demo
+
+[View on Netlify](https://your-deployment-link.netlify.app)

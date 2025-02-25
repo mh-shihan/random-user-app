@@ -1,3 +1,5 @@
+import { BsFillPersonFill } from "react-icons/bs";
+
 const Card = ({ user = {}, darkMode }) => {
   return (
     <div
@@ -50,12 +52,13 @@ const Card = ({ user = {}, darkMode }) => {
         {/* Location Button */}
         <div className="relative overflow-hidden h-10 w-10 rounded-full">
           <span className="absolute inset-0 bg-gray-200 flex items-center justify-center transition-all duration-300">
-            📍
+            location
           </span>
-          <span className="absolute inset-0 bg-green-500 flex items-center justify-center text-white transform translate-y-full hover:translate-y-0 transition-all duration-300">
+          <span className="absolute inset-0 bg-green-500 flex items-center justify-center text-white hover:transform hover:translate-y-0 transition-all duration-300">
             📍
           </span>
         </div>
+        <BsFillPersonFill className="cursor-pointer" />
       </div>
     </div>
   );
