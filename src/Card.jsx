@@ -1,5 +1,3 @@
-import { BsFillPersonFill } from "react-icons/bs";
-
 const Card = ({ user = {}, darkMode }) => {
   return (
     <div
@@ -58,7 +56,6 @@ const Card = ({ user = {}, darkMode }) => {
             📍
           </span>
         </div>
-        <BsFillPersonFill className="cursor-pointer" />
       </div>
     </div>
   );

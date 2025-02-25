@@ -6,7 +6,6 @@ A React application that fetches and displays random user data from the [Random 
 
 - Display user information with profile images
 - Load new users dynamically
-- Search functionality
 - Dark mode toggle
 - Responsive design
 
@@ -14,8 +13,8 @@ A React application that fetches and displays random user data from the [Random 
 
 1. Clone the repository
 2. Install dependencies: `npm install`
-3. Start the app: `npm start`
+3. Start the app: `npm run dev`
 
 ## Live Demo
 
-[View on Netlify](https://your-deployment-link.netlify.app)
+[Click Here to Watch Live](glib-territory.surge.sh)
