@@ -17,4 +17,4 @@ A React application that fetches and displays random user data from the [Random 
 
 ## Live Demo
 
-[Click Here to Watch Live](glib-territory.surge.sh)
+[Click Here to Watch Live](https://glib-territory.surge.sh/)
