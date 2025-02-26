@@ -8,30 +8,53 @@ const Card = ({ user, darkMode }) => {
     phone = "",
     email = "",
     picture = { large: "" },
+    dob = { date: "" },
+    location = { city: "" },
   } = user || {};
 
   const fullName = `${name.title} ${name.first} ${name.last}`.trim();
+  const birthday = dob.date.split("T")[0];
 
   const buttonData = [
     {
       id: 1,
       label: "Person",
       hoverLabel: "Name",
+      subContent: "My name is",
       content: fullName,
     },
+
     {
       id: 2,
-      label: "Contact",
-      hoverLabel: "Number",
-      content: phone,
+      label: "Email",
+      hoverLabel: "Email",
+      subContent: "My email address is",
+      content: email,
     },
     {
       id: 3,
-      label: "Email",
-      hoverLabel: "Address",
-      content: email,
+      label: "birthday",
+      hoverLabel: "Birthday",
+      subContent: "My birthday is",
+      content: birthday,
+    },
+    {
+      id: 4,
+      label: "Location",
+      hoverLabel: "Location",
+      subContent: "My address is",
+      content: location.city,
+    },
+    {
+      id: 5,
+      label: "Phone",
+      hoverLabel: "Phone",
+      subContent: "My phone number is",
+      content: phone,
     },
   ];
+  const content = buttonData.find((b) => b.id === activeButton)?.content;
+  const subContent = buttonData.find((b) => b.id === activeButton)?.subContent;
 
   return (
     <div
@@ -46,8 +69,22 @@ const Card = ({ user, darkMode }) => {
 
       {/* Content Display */}
       <div className="mb-8 h-20 text-center">
-        <div className="text-2xl font-semibold text-gray-800">
-          {buttonData.find((b) => b.id === activeButton)?.content || fullName}
+        <div
+          className={`text-2xl font-semibold text-gray-800 ${
+            darkMode ? "text-white " : "text-black"
+          }`}
+        >
+          {subContent && content ? (
+            <>
+              <p className="text-base font-light">{subContent}</p>
+              <h3>{content}</h3>
+            </>
+          ) : (
+            <>
+              <p className="text-base font-light">My name is</p>
+              <h3>{fullName}</h3>
+            </>
+          )}
         </div>
       </div>
 
