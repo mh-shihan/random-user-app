@@ -1,29 +1,10 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Card from "./card";
+import useFetchedData from "./useFetchedData";
 
 function App() {
-  const [user, setUser] = useState({});
-  const [loading, setLoading] = useState(true);
   const [darkMode, setDarkMode] = useState(false);
-
-  useEffect(() => {
-    fetchUsers();
-  }, []);
-
-  const fetchUsers = async () => {
-    setLoading(true);
-    try {
-      const response = await fetch("https://randomuser.me/api");
-      const data = await response.json();
-      console.log(data);
-      setUser(data.results[0]);
-    } catch (error) {
-      console.error("Error fetching users:", error);
-    } finally {
-      setLoading(false);
-    }
-  };
-  console.log(user);
+  const { loading, user, fetchUsers } = useFetchedData();
 
   return (
     <div className={`min-h-screen ${darkMode ? "bg-gray-800" : "bg-gray-100"}`}>
