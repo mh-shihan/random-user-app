@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import Card from "./card";
 
 function App() {
-  const [user, setUser] = useState([]);
+  const [user, setUser] = useState({});
   const [loading, setLoading] = useState(true);
   const [darkMode, setDarkMode] = useState(false);
 
@@ -23,6 +23,7 @@ function App() {
       setLoading(false);
     }
   };
+  console.log(user);
 
   return (
     <div className={`min-h-screen ${darkMode ? "bg-gray-800" : "bg-gray-100"}`}>
@@ -69,7 +70,7 @@ function App() {
 
         {/* Users Grid */}
         <div className="flex justify-center">
-          {user && <Card user={user} darkMode={darkMode}></Card>}
+          <Card user={user} darkMode={darkMode}></Card>
         </div>
       </div>
     </div>
